@@ -1,0 +1,18 @@
+[package]
+name = "ftb"
+version = "0.1.0"
+edition = "2021"
+authors = ["Agustin Camino <agustin.camino@gmail.com>"]
+description = "A fast CLI tool to format and align Markdown tables"
+license = "MIT"
+repository = "https://github.com/acamino/format-table"
+readme = "README.md"
+keywords = ["markdown", "table", "formatter", "cli"]
+categories = ["command-line-utilities", "text-processing"]
+
+[[bin]]
+name = "ftb"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.1", features = ["derive"] }
