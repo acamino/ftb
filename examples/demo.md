@@ -1,3 +1,7 @@
-| h1 | h2 | h3 |
+| Feature | Status | Example |
 |-|-|-|
-| data1 | data2 | data3 |
+| Basic ASCII | ✓ | Works great |
+| Unicode Emoji | ✓ | 😀 🎉 🚀 |
+| CJK Characters | ✓ | 你好 こんにちは 안녕 |
+| Accented Latin | ✓ | café naïve résumé |
+| Mixed Content | ✓ | José (España) 🌍 田中 (日本) |

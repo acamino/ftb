@@ -1,0 +1,6 @@
+| Language | Word       | Meaning  |
+|----------|------------|----------|
+| English  | hello      | greeting |
+| 中文     | 你好       | greeting |
+| 日本語   | こんにちは | greeting |
+| 한국어   | 안녕하세요 | greeting |

@@ -20,19 +20,18 @@ fn main() {
     let cli = Cli::parse();
 
     // Read input from file or stdin
-    let input = match cli.input {
-        Some(path) => fs::read_to_string(&path).unwrap_or_else(|e| {
+    let input = if let Some(path) = cli.input {
+        fs::read_to_string(&path).unwrap_or_else(|e| {
             eprintln!("Error reading file '{}': {}", path.display(), e);
             process::exit(1);
-        }),
-        None => {
-            let mut buffer = String::new();
-            io::stdin().read_to_string(&mut buffer).unwrap_or_else(|e| {
-                eprintln!("Error reading from stdin: {}", e);
-                process::exit(1);
-            });
-            buffer
-        }
+        })
+    } else {
+        let mut buffer = String::new();
+        io::stdin().read_to_string(&mut buffer).unwrap_or_else(|e| {
+            eprintln!("Error reading from stdin: {e}");
+            process::exit(1);
+        });
+        buffer
     };
 
     // Format the table
@@ -40,5 +39,5 @@ fn main() {
     let output = formatter.format_table(&input);
 
     // Write to stdout
-    print!("{}", output);
+    print!("{output}");
 }

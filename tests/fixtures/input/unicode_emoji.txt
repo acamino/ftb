@@ -1,0 +1,5 @@
+| Emoji | Name | Category |
+|-|-|-|
+| 😀 | grinning | face |
+| 🎉 | party popper | celebration |
+| 🚀 | rocket | travel |

@@ -16,3 +16,4 @@ path = "src/main.rs"
 
 [dependencies]
 clap = { version = "4.1", features = ["derive"] }
+unicode-width = "0.1"
