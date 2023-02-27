@@ -3,7 +3,9 @@ use ftb::TableFormatter;
 /// Helper function to format a table
 fn format_table(input: &str) -> String {
     let mut formatter = TableFormatter::new();
-    formatter.format_table(input)
+    formatter
+        .format_table(input)
+        .expect("Table formatting should succeed")
 }
 
 #[test]
@@ -95,18 +97,24 @@ fn test_formatter_reuse_integration() {
     // Format first table
     let input1 = include_str!("fixtures/input/simple.txt");
     let expected1 = include_str!("fixtures/expected/simple.txt");
-    let output1 = formatter.format_table(input1);
+    let output1 = formatter
+        .format_table(input1)
+        .expect("Should format successfully");
     assert_eq!(output1, expected1);
 
     // Reuse formatter for second table
     let input2 = include_str!("fixtures/input/irregular.txt");
     let expected2 = include_str!("fixtures/expected/irregular.txt");
-    let output2 = formatter.format_table(input2);
+    let output2 = formatter
+        .format_table(input2)
+        .expect("Should format successfully");
     assert_eq!(output2, expected2);
 
     // Reuse again for unicode table
     let input3 = include_str!("fixtures/input/unicode_emoji.txt");
     let expected3 = include_str!("fixtures/expected/unicode_emoji.txt");
-    let output3 = formatter.format_table(input3);
+    let output3 = formatter
+        .format_table(input3)
+        .expect("Should format successfully");
     assert_eq!(output3, expected3);
 }
