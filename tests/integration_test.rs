@@ -118,3 +118,14 @@ fn test_formatter_reuse_integration() {
         .expect("Should format successfully");
     assert_eq!(output3, expected3);
 }
+
+#[test]
+fn test_document_with_multiple_tables() {
+    let input = include_str!("fixtures/input/document_with_tables.txt");
+    let expected = include_str!("fixtures/expected/document_with_tables.txt");
+
+    let mut formatter = TableFormatter::new();
+    let output = formatter.format_document(input);
+
+    assert_eq!(output, expected);
+}

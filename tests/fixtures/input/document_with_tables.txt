@@ -1,0 +1,28 @@
+# Sample Documentation
+
+This is a sample document with multiple tables.
+
+## First Table
+
+Here's a comparison table:
+
+| Feature | Status | Priority |
+|-|-|-|
+| Parser | Done | High |
+| Formatter | Done | High |
+| Tests | In Progress | Medium |
+
+## Description
+
+Some text between tables. This should be preserved exactly as-is.
+
+## Second Table
+
+| Version | Date | Changes |
+|-|-|-|
+| 0.1.0 | Oct 1 | Initial release |
+| 0.2.0 | Oct 10 | Document mode |
+
+## Conclusion
+
+Final text that should remain unchanged.
