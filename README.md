@@ -1,5 +1,7 @@
 # ftb
 
+![CI](https://github.com/acamino/ftb/actions/workflows/ci.yml/badge.svg)
+
 A simple CLI tool to format and align Markdown tables.
 
 This is a Rust port of the JavaScript formatter from [markdowntable.com](http://markdowntable.com/).
