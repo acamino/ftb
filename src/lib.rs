@@ -415,11 +415,11 @@ impl TableFormatter {
                 // Handle the separator row
                 if row_i == 1 {
                     // Use iterator instead of String::repeat (avoids allocation)
-                    cell.extend(std::iter::repeat('-').take(padding));
+                    cell.extend(std::iter::repeat_n('-', padding));
                 }
                 // Handle anything that's not the separator row
                 else {
-                    cell.extend(std::iter::repeat(' ').take(padding));
+                    cell.extend(std::iter::repeat_n(' ', padding));
                 }
             }
         }

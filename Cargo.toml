@@ -5,7 +5,7 @@ edition = "2021"
 authors = ["Agustin Camino <agustin.camino@gmail.com>"]
 description = "A fast CLI tool to format and align Markdown tables"
 license = "MIT"
-repository = "https://github.com/acamino/format-table"
+repository = "https://github.com/acamino/ftb"
 readme = "README.md"
 keywords = ["markdown", "table", "formatter", "cli"]
 categories = ["command-line-utilities", "text-processing"]
@@ -15,5 +15,5 @@ name = "ftb"
 path = "src/main.rs"
 
 [dependencies]
-clap = { version = "4.1", features = ["derive"] }
+clap = { version = "4.5", features = ["derive"] }
 unicode-width = "0.1"
